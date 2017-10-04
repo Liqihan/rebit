@@ -1,0 +1,59 @@
+.layout-left-side{
+    width: 240px;
+    .el-tabs {
+        height: 100%;
+    }
+    .el-tab-pane {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .component-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .component {
+            padding-top: 10px;
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &:hover {
+                img {
+                    animation: bounce 1.5s ease-in-out infinite;
+                    @keyframes bounce {
+                        0%{
+                            transform: translateY(0);
+                        }
+                        15%{
+                            transform: translateY(-6px);
+                        }
+                        30%{
+                            transform: translateY(0px);
+                        }
+                        45%{
+                            transform: translateY(-3px);
+                        }
+                        60%{
+                            transform: translateY(0px);
+                        }
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+            img{
+                width: 80px;
+                height: 80px;
+            }
+            p {
+                padding: 4px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
