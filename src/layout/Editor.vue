@@ -3,6 +3,8 @@
     <layout-header />
     <div class="body">
       <layout-left-side />
+      <div class="editor-center">编辑</div>
+      <layout-right-side />
     </div>
     <div>家居安静asdfaf</div>
 
@@ -12,11 +14,13 @@
 <script>
 import layoutHeader from './editor/layout-header'
 import layoutLeftSide from './editor/layout-left-side';
+import layoutRightSide from './editor/layout-right-side';
 export default {
   name: 'app',
   components: {
     layoutHeader,
-    layoutLeftSide
+    layoutLeftSide,
+    layoutRightSide
   },
 
 }
@@ -37,5 +41,8 @@ export default {
     position: relative;
     overflow: hidden;
     height: calc(100vh - 60px);
+  }
+  .editor-center{
+    flex: 1;
   }
 </style>
